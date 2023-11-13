@@ -9,7 +9,20 @@
 #define HRML(k1,k2,k3,k4) &td_ls  &ht LCTRL k2  &ht LALT k3  &ht LGUI k4
 #define HRMR(k1,k2,k3,k4) &ht LGUI k1  &ht RALT k2  &ht RCTRL k3  &td_rs
 
+
+
 / {
+    macros {
+        del_word: del_word {
+            label = "del_word";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL &kp BSPC>
+                ;
+        };
+    };
+
     behaviors {
         ht: hold_tap {
             label = "hold_tap_shift";
@@ -40,6 +53,16 @@
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
                 bindings = <&kp SQT>, <&sk LSHIFT>;
+        };
+    };
+
+    behaviors {
+        delete_word: delete_word {
+                compatible = "zmk,behavior-tap-dance";
+                label = "TAP_DANCE_MOD_RIGHT_TAP";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp BSPC>, <&del_word>;
         };
     };
 
