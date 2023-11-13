@@ -31,7 +31,9 @@
                 tapping-term-ms = <200>;
                 bindings = <&kp A>, <&sk LSHIFT>;
         };
-
+    };
+    
+    behaviors {
         td_rs: tap_dance_mod_tap {
                 compatible = "zmk,behavior-tap-dance";
                 label = "TAP_DANCE_MOD_TAP";
