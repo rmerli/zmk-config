@@ -11,7 +11,7 @@
 
 / {
     behaviors {
-        hts: hold_tap {
+        ht: hold_tap {
             label = "hold_tap_shift";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
