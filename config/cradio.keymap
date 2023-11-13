@@ -57,7 +57,7 @@
     };
 
     behaviors {
-        delete_word: delete_word {
+        dw: dw {
                 compatible = "zmk,behavior-tap-dance";
                 label = "TAP_DANCE_MOD_RIGHT_TAP";
                 #binding-cells = <0>;
@@ -88,7 +88,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 2 TAB   &kp ENTER      &kp BSPC   &lt 1 SPACE
+                                            &lt 2 TAB   &kp ENTER      &kp dw   &lt 1 SPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
