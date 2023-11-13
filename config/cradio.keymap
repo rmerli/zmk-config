@@ -63,7 +63,7 @@
                 compatible = "zmk,behavior-tap-dance";
                 label = "TAP_DANCE_DELETE_WORD";
                 #binding-cells = <0>;
-                tapping-term-ms = <100>;
+                tapping-term-ms = <120>;
                 bindings = <&kp BSPC>, <&del_word>;
         };
     };
