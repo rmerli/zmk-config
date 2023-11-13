@@ -22,14 +22,15 @@
             bindings = <&kp>, <&kp>;
         };
     };
+
     behaviors {
         td_s: tap_dance_mod_tap {
                 compatible = "zmk,behavior-tap-dance";
                 label = "TAP_DANCE_MOD_TAP";
-                #binding-cells = <0>;
+                #binding-cells = <1>;
                 tapping-term-ms = <200>;
                 bindings = <&kp>, &sk LSHIFT>;
-            };
+        };
     };
 
     conditional_layers {
