@@ -19,7 +19,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp BSPC
+                , <&macro_tap &kp BSPC>
                 , <&macro_release &kp LCTRL>
                 ;
         };
