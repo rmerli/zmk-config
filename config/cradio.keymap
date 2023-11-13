@@ -61,7 +61,7 @@
     behaviors {
         dw: dw {
                 compatible = "zmk,behavior-tap-dance";
-                label = "TAP_DANCE_MOD_RIGHT_TAP";
+                label = "TAP_DANCE_DELETE_WORD";
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
                 bindings = <&kp BSPC>, <&del_word>;
