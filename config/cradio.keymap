@@ -6,8 +6,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 // Home row mods macr
-#define HRML(k1,k2,k3,k4) &td_s k1  &ht LCTRL k2  &ht LALT k3  &ht LGUI k4
-#define HRMR(k1,k2,k3,k4) &ht LGUI k1  &ht RALT k2  &ht RCTRL k3  &td_s k4
+#define HRML(k1,k2,k3,k4) &td_ls  &ht LCTRL k2  &ht LALT k3  &ht LGUI k4
+#define HRMR(k1,k2,k3,k4) &ht LGUI k1  &ht RALT k2  &ht RCTRL k3  &td_rs
 
 / {
     behaviors {
@@ -24,12 +24,20 @@
     };
 
     behaviors {
-        td_s: tap_dance_mod_tap {
+        td_ls: tap_dance_mod_tap {
                 compatible = "zmk,behavior-tap-dance";
                 label = "TAP_DANCE_MOD_TAP";
-                #binding-cells = <1>;
+                #binding-cells = <0>;
                 tapping-term-ms = <200>;
-                bindings = <&kp>, &sk LSHIFT>;
+                bindings = <&kp A>, &sk LSHIFT>;
+        };
+
+        td_rs: tap_dance_mod_tap {
+                compatible = "zmk,behavior-tap-dance";
+                label = "TAP_DANCE_MOD_TAP";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp SQT>, &sk RSHIFT>;
         };
     };
 
