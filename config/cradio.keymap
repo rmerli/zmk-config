@@ -27,7 +27,9 @@
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;
         };
+    };
 
+    behaviors {
         htr: hold_tap {
             label = "home_row_right";
             compatible = "zmk,behavior-hold-tap";    
@@ -40,7 +42,8 @@
             hold-trigger-on-release;  
             bindings = <&kp>, <&kp>;
         };
-
+    };
+    behaviors {
         hts: hold_tap {
             label = "hold_tap_shift";
             compatible = "zmk,behavior-hold-tap";
